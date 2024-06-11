@@ -1,0 +1,89 @@
+.Contactanos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: url(Fondo_home.png);
+  background-size: contain;
+  background-repeat: repeat;
+  border: 1px solid black;
+}
+.sidenav a {
+  position: absolute;
+  left: -120px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 130px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+}
+.sidenav a:hover {
+  left: 0;
+}
+
+#home {
+  top: 20px;
+  background-color: #e611bf;
+}
+
+#menu {
+  top: 80px;
+  background-color: #006ace;
+}
+
+#donas {
+  top: 140px;
+  background-color: #08daff;
+}
+#crepas {
+  top: 200px;
+  background-color: #08daff;
+}
+#form_pedido {
+  top: 260px;
+  background-color: #1dff55;
+}
+.log {
+  border: 5px solid greenyellow;
+  height: 230px;
+  width: 200px;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #00dded;
+  font-size: 50px;
+  padding-right: 80px;
+
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-left: 80px;
+}
+
+.log {
+  width: 200px;
+  transition: transform 0.3 ease;
+}
+
+.log:hover {
+  transform: scale(1.1);
+}
+
+img {
+  width: 200px;
+  transition: transform 0.3 ease;
+}
+img:hover {
+  transform: scale(1.1);
+}
+
+img {
+  height: 90px;
+  width: 90px;
+}

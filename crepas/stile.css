@@ -1,0 +1,31 @@
+.log {
+    border: 5 px solid greenyellow;
+}
+
+body {
+    background-image: url('fondo_home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.galeria .imagen {
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}

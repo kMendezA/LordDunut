@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Pedido</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        background-image: url(Fondo_home.png);
+        background-size: contain;
+        background-repeat: repeat;
+      }
+
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .invoice {
+        display: none;
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .invoice h2 {
+        margin-bottom: 1rem;
+      }
+
+      .invoice p {
+        font-size: 1.1rem;
+      }
+
+      img {
+        height: 230px;
+        width: 200px;
+        border-radius: 20px;
+        border: 5px solid greenyellow;
+      }
+
+      .sidenav a {
+        position: absolute;
+        left: -120px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 130px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        position: fixed;
+      }
+
+      .sidenav a:hover {
+        left: 0;
+      }
+
+      #contacto {
+        top: 20px;
+        background-color: rgb(21, 206, 206);
+      }
+
+      #home {
+        top: 90px;
+        background-color: #e611bf;
+      }
+
+      #menu {
+        top: 160px;
+        background-color: #118de6;
+      }
+
+      #donas {
+        top: 230px;
+        background-color: #ea7807;
+      }
+
+      #crepas {
+        top: 300px;
+        background-color: #07ea12;
+      }
+
+      h2 {
+        text-align: center;
+        color: #00dded;
+      }
+
+      .log {
+        width: 200px;
+        transition: transform 0.3 ease;
+      }
+
+      .log:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header align="center">
+      <nav id="mySidenav" class="sidenav">
+        <a
+          href="/Contactanos/contactanos.html"
+          id="contacto"
+          title="contactanos"
+          >Contacto</a
+        >
+        <a href="/Home/Home.html" id="home" title="Blog">Home</a>
+        <a href="/Menu/Menú.html" id="menu" title="Donas">Menu</a>
+        <a href="/donas/donas.html" id="donas" title="crepas">Donas</a>
+        <a href="/crepas/Crepas.html" id="crepas" title="crepas">Crepas</a>
+      </nav>
+
+      <img src="Logo_Lord_Donut_.jpg" alt="Mister Donut Logo" class="log" />
+    </header>
+
+    <div class="container mt-5">
+      <div class="form-container">
+        <h2 class="text-center">Formulario de Pedido</h2>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="customerName">Nombre del Cliente</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="product">Producto</label>
+            <input type="text" class="form-control" id="product" required />
+          </div>
+          <div class="form-group">
+            <label for="quantity">Cantidad</label>
+            <input type="number" class="form-control" id="quantity" required />
+          </div>
+          <div class="form-group">
+            <label for="price">Precio Unitario</label>
+            <input type="number" class="form-control" id="price" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Enviar Pedido
+          </button>
+        </form>
+      </div>
+
+      <div class="invoice">
+        <h2 class="text-center">Factura</h2>
+        <p>
+          <strong>Nombre del Cliente:</strong>
+          <span id="invoiceCustomerName"></span>
+        </p>
+        <p><strong>Producto:</strong> <span id="invoiceProduct"></span></p>
+        <p><strong>Cantidad:</strong> <span id="invoiceQuantity"></span></p>
+        <p>
+          <strong>Precio Unitario:</strong> $<span id="invoicePrice"></span>
+        </p>
+        <p><strong>Total:</strong> $<span id="invoiceTotal"></span></p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Obtener los valores del formulario
+          var customerName = document.getElementById("customerName").value;
+          var product = document.getElementById("product").value;
+          var quantity = document.getElementById("quantity").value;
+          var price = document.getElementById("price").value;
+
+          // Calcular el total
+          var total = quantity * price;
+
+          // Rellenar la factura
+          document.getElementById("invoiceCustomerName").innerText =
+            customerName;
+          document.getElementById("invoiceProduct").innerText = product;
+          document.getElementById("invoiceQuantity").innerText = quantity;
+          document.getElementById("invoicePrice").innerText = price;
+          document.getElementById("invoiceTotal").innerText = total.toFixed(2);
+
+          // Mostrar la factura
+          document.querySelector(".invoice").style.display = "block";
+        });
+    </script>
+  </body>
+</html>

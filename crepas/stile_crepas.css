@@ -1,0 +1,138 @@
+.sidenav a {
+  position: absolute;
+  left: -120px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 130px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+}
+.sidenav a:hover {
+  left: 0;
+}
+
+#contacto {
+  top: 20px;
+  background-color: rgb(21, 206, 206);
+}
+#home {
+  top: 80px;
+  background-color: #e611bf;
+}
+
+#menu {
+  top: 140px;
+  background-color: #006ace;
+}
+
+#donas {
+  top: 200px;
+  background-color: #08daff;
+}
+#form_pedido {
+  top: 260px;
+  background-color: #1dff55;
+}
+.log {
+  border: 5px solid greenyellow;
+  height: 230px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #00dded;
+  font-size: 50px;
+  padding-right: 80px;
+  border: 3px solid greenyellow;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.crepas {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #00dded;
+  font-size: 50px;
+  padding-right: 80px;
+
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.nosotros {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+
+p {
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.log {
+  height: 230px;
+  width: 200px;
+  border-radius: 20px;
+  border: 5px solid greenyellow;
+}
+.titulo {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  text-decoration: underline;
+}
+
+.Precio {
+  color: #04aa6d;
+  text-decoration: underline;
+}
+
+body {
+  background-image: url("Fondo_home.png");
+  background-size: contain;
+  background-repeat: repeat;
+  border: 1px solid black;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.galeria .imagen {
+  text-align: center;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.imagen {
+  width: 200px;
+  transition: transform 0.3 ease;
+}
+.imagen:hover {
+  transform: scale(1.1);
+}
+
+.log {
+  width: 200px;
+  transition: transform 0.3 ease;
+}
+
+.log:hover {
+  transform: scale(1.1);
+}
