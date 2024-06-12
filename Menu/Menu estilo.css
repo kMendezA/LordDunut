@@ -68,6 +68,11 @@ p {
   font-family: cursive;
 }
 
+.Precio {
+  color: #04aa6d;
+  text-decoration: underline;
+}
+
 .log {
   height: 230px;
   width: 200px;
